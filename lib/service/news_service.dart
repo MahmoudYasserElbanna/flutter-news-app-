@@ -10,7 +10,7 @@ class NewsService {
       // We use Async programming due to delay from internet
       // When we use await keyword we must covert function to async one
       Response responseFromApi = await dio.get(
-          'https://newsapi.org/v2/top-headlines?country=us&apiKey=67e5a7f48bcf482f99a330c412fe450b&category=$apiCategory');
+          'https://newsapi.org/v2/top-headlines?country=us&apiKey='YOUR API KEY'&category=$apiCategory');
       // Using Map<String, dynamic> becuase we know the data structure of API
       Map<String, dynamic> jsonData = responseFromApi.data;
       List<dynamic> article = jsonData['articles'];
